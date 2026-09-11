@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { observeAuth } from "./auth";
 import Sidebar from "./components/layout/Sidebar";
 import AIPriorityEngine from "./pages/AIPriorityEngine";
 import BlockPlanning from "./pages/BlockPlanning";
@@ -12,6 +13,7 @@ import MonthlyPlanning from "./pages/MonthlyPlanning";
 import Reports from "./pages/Reports";
 import SystemIntegration from "./pages/SystemIntegration";
 import HelpSupport from "./pages/HelpSupport";
+import Login from "./pages/Login";
 
 const formatDate = (date) => new Intl.DateTimeFormat("en-IN", {
   weekday: "long",
@@ -101,11 +103,15 @@ const AppShell = () => (
   </div>
 );
 
-const App = () => (
-  <BrowserRouter>
-    <AppShell />
-  </BrowserRouter>
-);
+const App = () => {
+  const [user, setUser] = useState(undefined);
+
+  useEffect(() => observeAuth(setUser), []);
+
+  if (user === undefined) return <div className="auth-loading">Checking secure session...</div>;
+
+  return <BrowserRouter>{user ? <AppShell /> : <Routes><Route path="/login" element={<Login />} /><Route path="*" element={<Navigate to="/login" replace />} /></Routes>}</BrowserRouter>;
+};
 
 export default App;[
   {
