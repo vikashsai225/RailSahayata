@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: railsahayata
+    runtime: node
+    buildCommand: npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend
+    startCommand: npm start --prefix backend
+    healthCheckPath: /api/tasks

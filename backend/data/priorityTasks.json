@@ -1,0 +1,57 @@
+[
+  {
+    "id": "T-101",
+    "title": "Signal failure repair",
+    "safetyRisk": 90,
+    "delayImpact": 80,
+    "assetCriticality": 95,
+    "maintenanceUrgency": 85,
+    "resourceAvailability": 70,
+    "zone": "Northern",
+    "line": "Delhi–Amritsar"
+  },
+  {
+    "id": "T-102",
+    "title": "Track inspection",
+    "safetyRisk": 60,
+    "delayImpact": 50,
+    "assetCriticality": 70,
+    "maintenanceUrgency": 55,
+    "resourceAvailability": 40,
+    "zone": "Western",
+    "line": "Mumbai–Pune"
+  },
+  {
+    "id": "T-103",
+    "title": "Routine cleaning",
+    "safetyRisk": 20,
+    "delayImpact": 30,
+    "assetCriticality": 35,
+    "maintenanceUrgency": 25,
+    "resourceAvailability": 60,
+    "zone": "Southern",
+    "line": "Chennai–Bengaluru"
+  },
+  {
+    "id": "T-104",
+    "title": "Bridge inspection",
+    "safetyRisk": 88,
+    "delayImpact": 72,
+    "assetCriticality": 92,
+    "maintenanceUrgency": 80,
+    "resourceAvailability": 65,
+    "zone": "Eastern",
+    "line": "Kolkata–Asansol"
+  },
+  {
+    "id": "T-105",
+    "title": "Coach AC maintenance",
+    "safetyRisk": 45,
+    "delayImpact": 58,
+    "assetCriticality": 60,
+    "maintenanceUrgency": 65,
+    "resourceAvailability": 80,
+    "zone": "Central",
+    "line": "Nagpur–Bhopal"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "railsahayata",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n backend,frontend -c blue,green \"npm --prefix backend run dev\" \"npm --prefix frontend run dev -- --host 0.0.0.0 --port 5173\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
